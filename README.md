@@ -1,6 +1,6 @@
 # SEO — Python CLI Tools for On-Page & Local SEO
 
-Python scripts for on-page SEO audits, local business verification, keyword research, and structured data validation. Built for quick, repeatable client audits.
+Python scripts for on-page SEO audits, local business verification, keyword research, and structured data validation. Built by **[Sourced Consulting](https://sourcedconsulting.com.au)** for quick, repeatable tradie SEO audits across Brisbane and greater Queensland.
 
 ---
 
