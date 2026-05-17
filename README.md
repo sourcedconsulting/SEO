@@ -70,12 +70,14 @@ Requires `beautifulsoup4`.
 
 ---
 
-### `backlink_checker.py` — Domain Index / Backlink Signals
-Quick Wayback Machine and Google index signal check. Not a full backlink scraper (for that use Ahrefs/Semrush APIs). Good for monitoring whether a client domain is being indexed at all.
+### `wayback_checker.py` — Multi-Wayback Archival Check
+Quick check across Internet Archive (CDX + /web/*/ fallback), Archive.today, and
+Google `site:`. Flags every non-success state clearly — 503, 429, 403, empty body —
+and never reports "not found" when the service itself was unreachable.
 
 ```bash
-python scripts/backlink_checker.py https://example.com
-python scripts/backlink_checker.py https://example.com --json signals.json
+python scripts/wayback_checker.py https://example.com
+python scripts/wayback_checker.py https://example.com --json signals.json
 ```
 
 ---
@@ -95,7 +97,7 @@ Each script ships with a self-contained test file in `scripts/tests/`. No `pytes
 python scripts/tests/test_keyword_clusterer.py
 python scripts/tests/test_schema_checker.py
 python scripts/tests/test_citation_checker.py
-python scripts/tests/test_backlink_checker.py
+python scripts/tests/test_wayback_checker.py
 python scripts/tests/test_seo_score.py
 python scripts/tests/test_clause_density.py
 ```
@@ -109,7 +111,7 @@ python scripts/tests/test_clause_density.py
 2. python scripts/schema_checker.py https://xyztradies.com.au --check local-business service
 3. python scripts/seo_score.py https://xyztradies.com.au --json audit.json
 4. python scripts/clause_density.py https://xyztradies.com.au/services
-5. python scripts/backlink_checker.py https://xyztradies.com.au
+5. python scripts/wayback_checker.py https://xyztradies.com.au
 ```
 
 ---
